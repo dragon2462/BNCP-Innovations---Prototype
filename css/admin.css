@@ -1,0 +1,198 @@
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, lightgreen, cyan);
+    background-size: 300% 300%;
+    animation: gradientMove 5s infinite ease-in;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+header p {
+    font-size: 36px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 24px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+main ul {
+    display: grid;
+}
+
+main ul li {
+    list-style: none;
+    margin: 10px 20px;
+    margin-left: -40px;
+    padding: 10px;
+}
+
+main ul li a {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 24px;
+}
+
+main .quick-actions {
+    display: grid;
+    justify-content: space-between;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+main button {
+    margin-right: 10px;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+main .activities {
+    border-radius: 25px;
+    width: 1000px;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.appointment-table {
+    width: 50px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .appointment-table th,
+  .appointment-table td {
+    padding: 8px;
+    background-color: white;
+    font-size: 24px;
+    border: 2px solid black;
+    width: 50px;
+  }
+  
+  .status-confirmed {
+    color: green;
+  }
+  
+  .status-canceled {
+    color: red;
+  }
+  
+
+footer {
+    background-color: white;
+    height: 100%;
+    text-align: center;
+    margin: -10px;
+    margin-top: 10px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: black;
+  }
+
+  .calendar-day, .calendar-header {
+    background-color: white;
+    border: 1px solid black;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .calendar-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+    justify-content: center;
+  }
+
+  .appointment {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .status-confirmed {
+    background-color: green;
+    color: white;
+  }
+
+  .status-canceled {
+    background-color: red;
+    color: white;
+  }

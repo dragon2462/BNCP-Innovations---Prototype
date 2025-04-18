@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewGen Hairstyles - Appointment Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Appointment Calendar</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="admin-profile.html">Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="display: flex;">
+        <div>
+            <ul>
+                <li><a href="reports.html">View Reports</a></li>
+                <li><a href="admin-calendar.html">Appointments Calendar</a></li>
+                <li><a href="manage_users.html">Manage Users</a></li>
+                <li><a href="settings.html">System Settings</a></li>
+            </ul>
+
+            <section class="quick-actions">
+                <h3>Quick Actions</h3>
+                <button onclick="location.href='add_user.html'">Add New User</button>
+                <button onclick="location.href='generate_report.html'">Generate Report</button>
+            </section>
+        </div>
+
+        <section class="appointments" style="text-align: center;">
+            <h3>October 2023</h3>
+            <div class="calendar" id="calendar">
+            </div>
+          </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BNCP Innovations. All rights reserved.</p>
+    </footer>
+</body>
+</html>

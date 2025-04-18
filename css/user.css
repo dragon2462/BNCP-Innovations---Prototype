@@ -1,0 +1,198 @@
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, lightgreen, cyan);
+    background-size: 300% 300%;
+    animation: gradientMove 5s infinite ease-in;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+header p {
+    font-size: 36px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 24px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: black;
+}
+
+main ul {
+    display: grid;
+}
+
+main ul li {
+    list-style: none;
+    margin: 10px 20px;
+    margin-left: -40px;
+    padding: 10px;
+}
+
+main ul li a {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 14px;
+}
+
+main .account-actions {
+    display: grid;
+    justify-content: space-between;
+    margin: 20px 0;
+    text-align: center;
+}
+
+main button {
+    margin: 5px;
+    padding: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.appointment-table {
+    margin-top: 20px;
+    width: 1000px;
+}
+
+.appointment-table th,
+.appointment-table td {
+    border: 2px solid black;
+    padding: 8px;
+    background-color: white;
+    font-size: 24px;
+}
+
+.status-confirmed {
+    color: green;
+}
+
+.status-canceled {
+    color: red;
+}
+
+footer {
+    background-color: white;
+    height: 100%;
+    text-align: center;
+    margin: -10px;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.sidebar {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.appointments {
+    flex: 2;
+    text-align: center;
+}
+
+.appointments table {
+    margin: 0 auto;
+    background-color: white;
+}
+
+.services li {
+    display: grid;
+    justify-content: left;
+    background-color: black;
+    width: 110px;
+    color: white;
+    height: 75px;
+}
+
+.services li a {
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: black;
+  }
+
+  .calendar-day, .calendar-header {
+    background-color: white;
+    border: 1px solid black;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .calendar-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+  }
