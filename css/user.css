@@ -12,9 +12,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to left, lightgreen, cyan);
-    background-size: 300% 300%;
-    animation: gradientMove 5s infinite ease-in;
+    background-color: beige;
+    margin: 20px;
 }
 
 header {
@@ -98,6 +97,11 @@ main button {
     width: auto;
 }
 
+main button a {
+    color: white;
+    text-decoration: none;
+}
+
 button:hover {
     background-color: #0056b3;
 }
@@ -127,8 +131,9 @@ footer {
     background-color: white;
     height: 100%;
     text-align: center;
-    margin: -10px;
+    margin: -20px;
     margin-top: 10px;
+    font-size: 24px;
 }
 
 main {
@@ -196,3 +201,19 @@ main {
     font-weight: bold;
     text-align: center;
   }
+
+  .calendar-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    font-size: 18px;
+  }
+  
+  .calendar-controls button {
+    padding: 6px 12px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  

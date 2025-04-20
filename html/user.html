@@ -1,88 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>NewGen Hairstyles - User Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/user.css">
+  <meta charset="UTF-8" />
+  <title>NewGen Hairstyles - User Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/user.css" />
+  <script src="../js/user.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome, [User's Name]</h1>
-        <nav>
-            <ul>
-                <li><a href="user.html">Dashboard</a></li>
-                <li><a href="user-calendar.html">Calendar</a></li>
-                <li><a href="user-profile.html">Profile</a></li>
-                <li><a href="login.html">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <div>
-            <section class="account-actions">
-                <h2>Quick Actions</h2>
-                <button onclick="location.href='book-appointment.html'">Book an Appointment</button>
-                <button onclick="location.href='user-profile.html'">Update Profile</button>
-                <button onclick="location.href='view-history.html'">View Appointment History</button>
-            </section>
+  <header>
+    <h1>Welcome, [User's Name]</h1>
+    <nav>
+      <ul>
+        <li><a href="user.html">Dashboard</a></li>
+        <li><a href="user-calendar.html">Calendar</a></li>
+        <li><a href="user-profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <section class="services">
-                <h2>Recommended Services</h2>
-                <ul>
-                    <li>Hair Treatment <a href="book-service.html">Book Now</a></li>
-                    <li>Beard Trim <a href="book-service.html">Book Now</a></li>
-                    <li>Hair Styling<a href="book-service.html">Book Now</a></li>
-                </ul>
-            </section>
-        </div>
+  <main>
+    <div>
+      <section class="account-actions">
+        <h2>Quick Actions</h2>
+        <button><a href="schedule.html">Book an Appointment</a></button>
+        <button onclick="location.href='user-profile.html'">Update Profile</button>
+        <button onclick="location.href='view-history.html'">View Appointment History</button>
+      </section>
 
-        <section class="appointments">
-            <h2>Your Upcoming Appointments</h2>
-            <table class="appointment-table">
-            <thead>
-              <tr>
+      <section class="services">
+        <h2>Recommended Services</h2>
+        <ul>
+          <li>Hair Treatment <a href="book-service.html">Book Now</a></li>
+          <li>Beard Trim <a href="book-service.html">Book Now</a></li>
+          <li>Hair Styling <a href="book-service.html">Book Now</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="appointments">
+      <h2>Your Upcoming Appointments</h2>
+      <table class="appointment-table">
+        <thead>
+          <tr>
             <th>Date</th>
             <th>Time</th>
             <th>Service</th>
             <th>Stylist</th>
             <th>Status</th>
             <th>Prepay</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-            <td>April 20, 2025</td>
-            <td>10:00 AM</td>
-            <td>Haircut</td>
-            <td>John Doe</td>
-            <td class="status-confirmed">Confirmed</td>
-            <td><button onclick="">Prepay</button></td>
-              </tr>
-              <tr>
-            <td>April 25, 2025</td>
-            <td>2:00 PM</td>
-            <td>Hair Coloring</td>
-            <td>N/A</td>
-            <td class="status-pending">Pending</td>
-            <td><button onclick="">Prepay</button></td>
-              </tr>
-              <tr>
-            <td>April 30, 2025</td>
-            <td>11:00 AM</td>
-            <td>Hair Styling</td>
-            <td>Jane Smith</td>
-            <td class="status-prepaid">Prepaid</td>
-            <td><span>Paid</span></td>
-              </tr>
-            </tbody>
-            </table>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 BNCP Innovations. All rights reserved.</p>
-    </footer>
+          </tr>
+        </thead>
+        <tbody id="appointmentTableBody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BNCP Innovations. All rights reserved.</p>
+  </footer>
 </body>
 </html>

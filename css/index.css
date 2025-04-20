@@ -14,9 +14,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to left, lightgreen, cyan);
-  background-size: 300% 300%;
-  animation: gradientMove 5s infinite ease-in;
+  background-color: beige;
+  margin: 20px;
 }
 
 header {
@@ -95,6 +94,10 @@ main section li {
 footer {
   background-color: white;
   height: 100%;
+  text-align: center;
+  margin: -20px;
+  margin-top: 10px;
+  font-size: 24px;
 }
 
 .carousel {

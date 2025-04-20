@@ -1,18 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Schedule Appointment</title>
-    <link rel="stylesheet" href="../css/schedule.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Schedule Appointment</title>
+  <link rel="stylesheet" href="../css/schedule.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="../js/schedule.js" defer></script>
 </head>
 <body>
-    <h2>Schedule an Appointment</h2>
-    <form>
-        <label>Date: <input type="date" name="date"></label><br>
-        <label>Time: <input type="time" name="time"></label><br>
-        <label>Service: <input type="text" name="service"></label><br>
-        <button type="submit">Submit</button>
-    </form>
+  <header>
+    <h1>Welcome, [User's Name]</h1>
+    <nav>
+      <ul>
+        <li><a href="user.html">Dashboard</a></li>
+        <li><a href="user-calendar.html">Calendar</a></li>
+        <li><a href="user-profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+      <section class="account-actions">
+        <h2>Quick Actions</h2>
+        <button><a href="schedule.html">Book an Appointment</a></button>
+        <button onclick="location.href='user-profile.html'">Update Profile</button>
+        <button onclick="location.href='view-history.html'">View Appointment History</button>
+      </section>
+
+      <section class="services">
+        <h2>Recommended Services</h2>
+        <ul>
+          <li>Hair Treatment <a href="book-service.html">Book Now</a></li>
+          <li>Beard Trim <a href="book-service.html">Book Now</a></li>
+          <li>Hair Styling <a href="book-service.html">Book Now</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Booking Form -->
+    <section class="booking-form" id="booking-section">
+      <h2>Schedule an Appointment</h2>
+      <form id="appointmentForm">
+        <label for="service">Select Service:</label>
+        <select id="service" name="service" required>
+          <option value="">-- Choose a service --</option>
+          <option value="Haircut">Haircut</option>
+          <option value="Hair Coloring">Hair Coloring</option>
+          <option value="Beard Trim">Beard Trim</option>
+          <option value="Hair Styling">Hair Styling</option>
+          <option value="Hair Treatment">Hair Treatment</option>
+        </select>
+
+        <label for="stylist">Preferred Stylist:</label>
+        <select id="stylist" name="stylist">
+          <option value="">-- Any Available --</option>
+          <option value="John Doe">John Doe</option>
+          <option value="Jane Smith">Jane Smith</option>
+          <option value="Emily Clark">Emily Clark</option>
+        </select>
+
+        <label for="date">Choose Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Choose Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="notes">Additional Notes (optional):</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+
+        <button type="submit">Review Appointment</button>
+      </form>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="appointment-preview" id="preview-section" style="display: none;">
+      <h2>Review Your Appointment</h2>
+      <ul id="preview-details"></ul>
+      <div id="preview-price"></div>
+      <button onclick="confirmAppointment()">Confirm Appointment</button>
+      <button onclick="goBack()">Go Back</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BNCP Innovations. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="confirmationModal">
+    <h3>Appointment Confirmed!</h3>
+    <p>Your appointment has been scheduled successfully.</p>
+    <button onclick="closeModal()">OK</button>
+  </div>
 </body>
 </html>
