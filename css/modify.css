@@ -1,59 +1,334 @@
 @keyframes gradientMove {
     0% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%;
+      background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to left, lightgreen, cyan);
-    background-size: 300% 300%;
-    animation: gradientMove 5s infinite ease-in;
-}
-
-header {
+    background-color: beige;
+    margin: 20px;
+  }
+  
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 10px;
-}
-
-header p {
+  }
+  
+  header p {
     font-size: 36px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;
-}
-
-nav {
+  }
+  
+  nav {
     display: flex;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     display: flex;
     justify-content: space-between;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     list-style: none;
     margin: 0 10px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     text-decoration: none;
     color: #000;
     border-radius: 25px;
     padding: 10px;
     border: 2px solid black;
-}
-
-nav ul li a:hover {
+    font-size: 24px;
+  }
+  
+  nav ul li a:hover {
+    color: white;
+    background-color: black;
+  }
+  
+  main ul {
+    display: grid;
+  }
+  
+  main ul li {
+    list-style: none;
+    margin: 10px 20px;
+    margin-left: -40px;
+    padding: 10px;
+  }
+  
+  main ul li a {
     color: white;
     background-color: black;
     padding: 10px;
-}
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 14px;
+  }
+  
+  main .account-actions {
+    display: grid;
+    justify-content: space-between;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  main button {
+    margin: 5px;
+    padding: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: auto;
+  }
+  
+  main button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  footer {
+    background-color: white;
+    height: 100%;
+    text-align: center;
+    margin: -20px;
+    margin-top: 10px;
+    font-size: 24px;
+  }
+  
+  main {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .services li {
+    display: grid;
+    justify-content: left;
+    background-color: black;
+    width: 110px;
+    color: white;
+    height: 75px;
+  }
+  
+  .services li a {
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+  }
+  
+  .booking-form {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .booking-form label {
+    font-weight: bold;
+  }
+  
+  .booking-form select,
+  .booking-form input,
+  .booking-form textarea {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .booking-form button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .booking-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  #price-estimate {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  /* Floating Modal */
+  #confirmationModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #007BFF;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: none;
+    text-align: center;
+  }
+  
+  #confirmationModal h3 {
+    margin-top: 0;
+  }
+  
+  #confirmationModal button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #confirmationModal button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modify Appointment */
+  .modify-appointment {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .modify-appointment h2 {
+    margin-top: 0;
+  }
+  
+  .modify-appointment form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .modify-appointment label {
+    font-weight: bold;
+  }
+  
+  .modify-appointment input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .modify-appointment button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modify-appointment button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .modify-appointment .cancel-button {
+    background-color: #dc3545;
+  }
+  
+  .modify-appointment .cancel-button:hover {
+    background-color: #c82333;
+  }
+  
+  #modifyMessage {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Quick Actions Section */
+.modify-appointment .account-actions {
+    display: grid;
+    justify-content: space-between;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .modify-appointment button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: auto;
+  }
+  
+  .modify-appointment button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none; /* Initially hidden */
+  }
+  
+  /* Container for input fields */
+  .input-container {
+    margin-bottom: 20px; /* Space between input fields and error message */
+  }
+  
+  /* Form Styling (if not already present) */
+  .modify-appointment form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  

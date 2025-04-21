@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Modify Appointment</title>
-    <link rel="stylesheet" href="../css/modify.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Modify or Cancel Appointment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/modify.css">
+  <script src="../js/modify.js" defer></script>
 </head>
 <body>
-    <h2>Modify an Appointment</h2>
-    <form>
-        <label>Appointment ID: <input type="text" name="appointment_id"></label><br>
-        <label>New Date: <input type="date" name="new_date"></label><br>
-        <label>New Time: <input type="time" name="new_time"></label><br>
+  <header>
+    <h1>Modify Appointments</h1>
+    <nav>
+      <ul>
+        <li><a href="user.html">Dashboard</a></li>
+        <li><a href="user-calendar.html">Calendar</a></li>
+        <li><a href="user-profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+    <section class="account-actions">
+      <h2>Quick Actions</h2>
+      <button><a href="./schedule.html">Book an Appointment</a></button>
+      <button onclick="location.href='user-profile.html'">Update Profile</button>
+      <button onclick="location.href='view-history.html'">View Appointment History</button>
+    </section>
+    </div>
+
+    <section class="modify-appointment">
+      <h2>Modify an Appointment</h2>
+      <form id="modifyForm">
+        <label for="appointment_select">Select Appointment:</label>
+        <select name="appointment_select" id="appointment_select" required>
+          <option value="">-- Select an Appointment --</option>
+        </select><br>
+        <label for="new_date">New Date: <input type="date" name="new_date" id="new_date" ></label><br>
+        <label for="new_time">New Time: <input type="time" name="new_time" id="new_time" ></label><br>
         <button type="submit">Modify</button>
-    </form>
+        <button type="submit" class="cancel-button">Cancel Appointment</button>
+      </form>
+      <div id="modifyMessage"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BNCP Innovations. All rights reserved.</p>
+  </footer>
 </body>
 </html>
