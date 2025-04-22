@@ -25,7 +25,7 @@ header {
 
 header p {
     font-size: 36px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;
 }
 
@@ -104,7 +104,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-main .activities {
+ .activities {
     border-radius: 25px;
     width: 1000px;
     text-align: center;
@@ -115,31 +115,30 @@ main .activities {
 }
 
 .appointment-table {
-    width: 50px;
+    width: 100%; /* Ensure the table takes full width */
     border-collapse: collapse;
     margin-top: 20px;
     font-size: 24px;
-  }
-  
-  .appointment-table th,
-  .appointment-table td {
+}
+
+.appointment-table th,
+.appointment-table td {
     padding: 8px;
     background-color: white;
     font-size: 24px;
     border: 2px solid black;
-    width: 50px;
-  }
-  
-  .status-confirmed {
-    color: green;
-  }
-  
-  .status-canceled {
-    color: red;
-  }
-  
+    width: auto;
+}
 
-  footer {
+.status-confirmed {
+    color: green;
+}
+
+.status-canceled {
+    color: red;
+}
+
+footer {
     background-color: white;
     height: 100%;
     text-align: center;
@@ -155,9 +154,10 @@ main .activities {
     margin: 20px auto;
     max-width: 900px;
     background-color: black;
-  }
+}
 
-  .calendar-day, .calendar-header {
+.calendar-day,
+.calendar-header {
     background-color: white;
     border: 1px solid black;
     min-height: 100px;
@@ -167,31 +167,47 @@ main .activities {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+}
 
-  .calendar-header {
+.calendar-header {
     background-color: #f0f0f0;
     font-weight: bold;
     text-align: center;
     height: 40px;
     justify-content: center;
-  }
+}
 
-  .appointment {
+.appointment {
     margin-top: 5px;
     padding: 5px;
     background-color: black;
     color: white;
     border-radius: 5px;
     font-size: 12px;
-  }
+}
 
-  .status-confirmed {
-    background-color: green;
-    color: white;
-  }
+/* Appointments Trend Section */
+.appointments-trend {
+    margin-top: 40px; /* Space between the table and the chart */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
 
-  .status-canceled {
-    background-color: red;
-    color: white;
-  }
+/* Canvas for the Chart */
+#appointmentsTrendChart {
+    background-color: white;
+    margin-right: 20px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout Fix: Main should stack elements vertically */
+main {
+    display: block; /* Change flex to block to make the sections stack */
+    margin: 10px;
+    padding: 10px;
+}

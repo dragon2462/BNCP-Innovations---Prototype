@@ -144,11 +144,11 @@ main {
 }
 
 .booking-form {
-    max-width: 600px;
+    width: 1000px;
     margin: 30px auto;
     background-color: #f8f8f8;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -160,13 +160,14 @@ main {
   
   .booking-form label {
     font-weight: bold;
+    font-size: 24px;
   }
   
   .booking-form select,
   .booking-form input,
   .booking-form textarea {
     padding: 8px;
-    font-size: 14px;
+    font-size: 18px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
@@ -186,47 +187,14 @@ main {
   }
   
   #price-estimate {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #007BFF;
   }
-  
-  /* Floating Modal */
-  #confirmationModal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 2px solid #007BFF;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 9999;
-    display: none;
-    text-align: center;
-  }
-  
-  #confirmationModal h3 {
-    margin-top: 0;
-  }
-  
-  #confirmationModal button {
-    margin-top: 15px;
-    padding: 8px 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  #confirmationModal button:hover {
-    background-color: #0056b3;
-  }
+    
 
   .booking-form, .appointment-preview {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 30px auto;
     background-color: #f8f8f8;
     padding: 25px;
@@ -270,15 +238,16 @@ main {
     list-style: none;
     padding: 0;
     margin-bottom: 15px;
+    width: 1000px;
   }
   
   #preview-details li {
     margin: 8px 0;
-    font-size: 15px;
+    font-size: 18px;
   }
   
   #preview-price {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #007BFF;
     margin-bottom: 20px;
@@ -286,10 +255,11 @@ main {
   
   /* Floating Modal */
   #confirmationModal {
+    transform: translate(-50%, -50%);
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 24px;
     background: white;
     border: 2px solid #007BFF;
     padding: 30px 40px;

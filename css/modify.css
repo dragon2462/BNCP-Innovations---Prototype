@@ -142,92 +142,11 @@
     background-color: white;
     color: black;
   }
-  
-  .booking-form {
-    max-width: 600px;
-    margin: 30px auto;
-    background-color: #f8f8f8;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .booking-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .booking-form label {
-    font-weight: bold;
-  }
-  
-  .booking-form select,
-  .booking-form input,
-  .booking-form textarea {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .booking-form button[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .booking-form button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  #price-estimate {
-    font-size: 16px;
-    font-weight: bold;
-    color: #007BFF;
-  }
-  
-  /* Floating Modal */
-  #confirmationModal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 2px solid #007BFF;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 9999;
-    display: none;
-    text-align: center;
-  }
-  
-  #confirmationModal h3 {
-    margin-top: 0;
-  }
-  
-  #confirmationModal button {
-    margin-top: 15px;
-    padding: 8px 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  #confirmationModal button:hover {
-    background-color: #0056b3;
-  }
+
   
   /* Modify Appointment */
   .modify-appointment {
-    max-width: 600px;
+    width: 700px;
     margin: 30px auto;
     background-color: #f8f8f8;
     padding: 25px;
@@ -247,11 +166,19 @@
   
   .modify-appointment label {
     font-weight: bold;
+    font-size: 24px;
   }
   
   .modify-appointment input {
     padding: 8px;
-    font-size: 14px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .modify-appointment select {
+    padding: 8px;
+    font-size: 18px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
@@ -263,6 +190,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
   }
   
   .modify-appointment button[type="submit"]:hover {
@@ -271,6 +202,7 @@
   
   .modify-appointment .cancel-button {
     background-color: #dc3545;
+    width: 100px;
   }
   
   .modify-appointment .cancel-button:hover {
