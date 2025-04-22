@@ -58,8 +58,11 @@
         <input type="date" id="date" name="date" required>
 
         <label for="time">Choose Time:</label>
-        <input type="time" id="time" name="time" required>
-
+        <select id="time" name="time" required>
+          <option value="">-- Select Time --</option>
+          <!-- JavaScript will populate these options dynamically -->
+        </select>
+        
         <label for="notes">Additional Notes (optional):</label>
         <textarea id="notes" name="notes" rows="4"></textarea>
 

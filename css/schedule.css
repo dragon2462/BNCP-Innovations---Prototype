@@ -180,6 +180,9 @@ main {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    width: 200px;
+    text-align: center;
+    margin: auto;
   }
   
   .booking-form button[type="submit"]:hover {
